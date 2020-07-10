@@ -29,9 +29,9 @@ class Inputs extends Component {
 		return (
 			<div className="inputs flex-col">
 				<div className="bill-total flex-col">
-					<span>Enter Bill</span>
+					<span>Bill Amount</span>
 					<input type="text" defaultValue={this.props.billTotal} onKeyPress={(e) => this.handleKeyPress(e)}  disabled />
-				</div>
+                </div>
 				<div className="guest-count flex-row">
 					<div onClick={() => this.props.getPartyCount('minus')}>
 						<i className="icon ion-md-remove"></i>

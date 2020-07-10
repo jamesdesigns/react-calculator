@@ -93,17 +93,19 @@ ul {
 .guest-count,
 .tip-percent, 
 .tip-total {
-	width: 48%;
+	/* width: 48%; */
 	color: #FDFEFD;
 	background-color: #ad5389;
 	border-radius: 10px;
   margin-bottom: 10px;
   font-size: 2rem;
+  text-align: left;
+  margin-left: 30px;
 }
 
 .bill-total {
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center;
+	align-items: center; */
 	padding-top: 10px;
   padding-bottom: 10px;
   width: auto;
@@ -150,10 +152,10 @@ ul {
 }
 
 .tip-percent {
-	width: 65%;
+	width: auto;
 	justify-content: center;
 	align-items: center;
-	/*margin: 0;*/
+  /*margin: 0;*/
 }
 
 .tip-percent ul {
@@ -171,16 +173,17 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 10px;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .tip-total {
-	width: 30%;
+	width: auto;
 	height: 70px;
 	justify-content: center;
-  text-align: center;
+  text-align: left;
   background-color: #fc00ff;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 
