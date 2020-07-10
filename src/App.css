@@ -111,6 +111,13 @@ ul {
   width: auto;
 }
 
+.align-center {
+  text-align: center;
+  margin-bottom: 25px;
+  background-color: #ad5389;
+  padding: 25px;
+}
+
 .bill-total input {
 	/* background-color: #ad5389; */
 	color: #FDFEFD;
@@ -179,11 +186,12 @@ ul {
 
 .tip-total {
 	width: auto;
-	height: 70px;
+	height: 100px;
 	justify-content: center;
   text-align: left;
-  background-color: #fc00ff;
+  /* background-color: #fc00ff; */
   font-size: 2rem;
+  margin-top: 25px;
 }
 
 
@@ -198,8 +206,8 @@ ul {
 	background: #8E2DE2;  
   background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  
   background: linear-gradient(to bottom, #3c1053, #ad5389);
-	color: black;
-	border: 1px solid white;
+	color: white;
+	border: 1px dotted white;
 	cursor: pointer;
 	margin: 5px 0;
   font-size: 2.5em;

@@ -34,7 +34,7 @@ class Inputs extends Component {
                 </div>
                 <div className="tip-total flex-col">
 					<span>Tip Total </span>
-					<span>$ {this.props.tipTotal.toFixed(2)}</span>	
+					<span className="align-center">$ {this.props.tipTotal.toFixed(2)}</span>	
 				</div>	
 				<div className="guest-count flex-row">
 					<div onClick={() => this.props.getPartyCount('minus')}>
