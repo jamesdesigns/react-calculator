@@ -15,13 +15,13 @@ const Results = (props) => {
 				<span>$ {props.costPerPerson.toFixed(1)}</span>
 			</li>
 			<li className="col-2">
-				<span>Total Bill</span>
+				<span>Total </span>
 				<span>$ </span><span>{(billTotal / partyCount).toFixed(1)}</span>
 			</li>
-			<li className="col-2">
+			{/* <li className="col-2">
 				<span>Tip  </span>
 				<span>$ </span><span>{(tipTotal / partyCount).toFixed(1)}</span>
-			</li>
+			</li> */}
 		</ul>
 	)
 }

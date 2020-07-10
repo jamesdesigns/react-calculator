@@ -32,7 +32,7 @@ class Inputs extends Component {
 					<span>Bill Total</span>
 					<input type="text" defaultValue={this.props.billTotal} onKeyPress={(e) => this.handleKeyPress(e)}  disabled />
 				</div>
-				<div className="guest-count flex-row">
+				{/* <div className="guest-count flex-row">
 					<div onClick={() => this.props.getPartyCount('minus')}>
 						<i className="icon ion-md-remove"></i>
 					</div>
@@ -43,7 +43,7 @@ class Inputs extends Component {
 					<div onClick={() => this.props.getPartyCount('add')}>
 						<i className="icon ion-md-add"></i>
 					</div>
-				</div>
+				</div> */}
 				<div className="tip-percent flex-col">
 					<ul>
 						{
