@@ -95,7 +95,7 @@ ul {
 .tip-total {
 	/* width: 48%; */
 	color: #FDFEFD;
-	background-color: #ad5389;
+	/* background-color: #ad5389; */
 	border-radius: 10px;
   margin-bottom: 10px;
   font-size: 2rem;
@@ -112,10 +112,10 @@ ul {
 }
 
 .bill-total input {
-	background-color: #ad5389;
+	/* background-color: #ad5389; */
 	color: #FDFEFD;
 	border:none;
-	width: 60%;
+	width: auto;
 	text-align: center;
   height: auto;
   font-size: 5rem;
