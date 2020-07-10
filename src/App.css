@@ -83,8 +83,8 @@ ul {
 
 .cost-pp {
 	width: 100%;
-	text-align: right;
-	display: 
+	text-align: left;
+	font-size: 5rem;
 }
 
 
@@ -97,14 +97,16 @@ ul {
 	color: #FDFEFD;
 	background-color: #ad5389;
 	border-radius: 10px;
-	margin-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 .bill-total {
 	justify-content: center;
 	align-items: center;
 	padding-top: 10px;
-	padding-bottom: 10px;
+  padding-bottom: 10px;
+  width: auto;
 }
 
 .bill-total input {
@@ -113,7 +115,8 @@ ul {
 	border:none;
 	width: 60%;
 	text-align: center;
-	height: 20px;
+  height: auto;
+  font-size: 5rem;
 }
 
 .bill-total input:focus {
@@ -189,9 +192,11 @@ ul {
 .keypad li button {
 	width: 100px;
 	height: 100px;
-	background-color: white;
-	color: #3c1053;
-	border: 1px solid #fff;
+	background: #8E2DE2;  
+  background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  
+  background: linear-gradient(to bottom, #3c1053, #ad5389);
+	color: black;
+	border: 1px solid white;
 	cursor: pointer;
 	margin: 5px 0;
   font-size: 2.5em;
