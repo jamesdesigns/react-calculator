@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Results from './Results';
 import Inputs from './Inputs';
 import Buttons from './Buttons';
-const btnsValue = [9,8,7,6,5,4,3,2,1,'.',0,'DEL'];
+const btnsValue = [9,8,7,6,5,4,3,2,1,'.',0,'C'];
 const tipPercentages = [.05, .10, .15, .20];
 
 class Calculator extends Component {
@@ -41,7 +41,7 @@ class Calculator extends Component {
 			return null;
 		}  
 
-		if(this.state.clickedBtn !== 'DEL') {
+		if(this.state.clickedBtn !== 'C') {
 			newState = this.state.billTotal + this.state.clickedBtn;
 			this.setState({
 				billTotal: newState

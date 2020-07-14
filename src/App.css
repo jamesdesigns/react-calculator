@@ -40,7 +40,7 @@ body {
 }
 
 #root {
-  width: 80%;
+  width: 85%;
   height: auto;
   color: white;
 	margin: 0 auto;
@@ -80,7 +80,8 @@ ul {
 .cost-pp {
 	width: 100%;
 	text-align: left;
-	font-size: 4rem;
+  font-size: 4rem;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 
@@ -220,7 +221,6 @@ ul {
 	outline: none;
 }
 
-.keypad li button:last-child {
+button:last-child {
   background-color: orange;
-  border-radius: 50%;
 }
