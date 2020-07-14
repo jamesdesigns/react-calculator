@@ -12,7 +12,7 @@ const Results = (props) => {
 		<ul className="results flex-col">
 			<li className="cost-pp flex-col">
 				<span>Total</span>
-				<span>$ {props.costPerPerson.toFixed(1)}</span>
+				<span>$ {props.costPerPerson.toFixed(2)}</span>
 			</li>
 			{/* <li className="col-2">
 				<span>Total </span>
