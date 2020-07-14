@@ -74,15 +74,13 @@ ul {
 .results {
 	width: 80%;
   color: white;
-  font-size: 3rem;
-	height: 191px;
 	justify-content: space-evenly;
 }
 
 .cost-pp {
 	width: 100%;
 	text-align: left;
-	font-size: 5rem;
+	font-size: 4rem;
 }
 
 
@@ -115,6 +113,8 @@ ul {
   background-color: #ad5389;
   padding: 10px;
   font-size: 4rem;
+  border-radius: 15px;
+  margin-top: 10px;
 }
 
 .bill-total input {
@@ -125,6 +125,8 @@ ul {
 	text-align: center;
   height: auto;
   font-size: 4rem;
+  border-radius: 15px;
+  margin-top: 10px;
 }
 
 .bill-total input:focus {
@@ -160,7 +162,8 @@ ul {
 .tip-percent {
 	width: auto;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
+  margin: 1.5rem 0;
   /*margin: 0;*/
 }
 
@@ -180,7 +183,7 @@ ul {
 	align-items: center;
 	justify-content: center;
   border-radius: 10px;
-  padding: 15px;
+  padding: 10px;
 }
 
 .tip-total {

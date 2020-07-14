@@ -28,14 +28,15 @@ class Inputs extends Component {
 	render() {
 		return (
 			<div className="inputs flex-col">
-				<div className="bill-total flex-col">
-					<span>Bill Amount</span>
-					<input type="text" defaultValue={this.props.billTotal} onKeyPress={(e) => this.handleKeyPress(e)}  disabled />
-                </div>
                 <div className="tip-total flex-col">
 					<span>Tip Total </span>
 					<span className="align-center">$ {this.props.tipTotal.toFixed(2)}</span>	
 				</div>	
+				<div className="bill-total flex-col">
+					<span>Bill Amount</span>
+					<input type="text" defaultValue={this.props.billTotal} onKeyPress={(e) => this.handleKeyPress(e)}  disabled />
+                </div>
+
 				<div className="guest-count flex-row">
 					<div onClick={() => this.props.getPartyCount('minus')}>
 						<i className="icon ion-md-remove"></i>
