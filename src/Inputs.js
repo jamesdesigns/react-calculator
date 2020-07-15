@@ -39,14 +39,14 @@ class Inputs extends Component {
 
 				<div className="guest-count flex-row">
 					<div onClick={() => this.props.getPartyCount('minus')}>
-						<i className="icon ion-md-remove"></i>
+						<p className="icon ion-md-remove">-</p>
 					</div>
 					<div>
 						<span>{this.props.partyCount} </span>
-						<i className="icon ion-md-person"></i>
+						<p className="icon ion-md-person"></p>
 					</div>
 					<div onClick={() => this.props.getPartyCount('add')}>
-						<i className="icon ion-md-add"></i>
+						<p className="icon ion-md-add">+</p>
 					</div>
 				</div>
 				<div className="tip-percent flex-col">
