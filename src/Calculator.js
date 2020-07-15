@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Results from './Results';
 import Inputs from './Inputs';
 import Buttons from './Buttons';
-const btnsValue = [9,8,7,6,5,4,3,2,1,'.',0,'C'];
+const btnsValue = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
 const tipPercentages = [.10, .15, .18, .20];
 
 class Calculator extends Component {
