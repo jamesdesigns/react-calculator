@@ -40,8 +40,10 @@ body {
 }
 
 #root {
-  width: 85%;
-  height: auto;
+  /* width: 85%;
+  height: auto; */
+  width: 400px;
+  height: 750px;
   color: white;
 	margin: 0 auto;
 	/* background: #8E2DE2;  
@@ -62,7 +64,11 @@ body {
 }
 
 .col-2 {
-	width: 50%;
+  width: 100%;
+  border-top: 1px dotted white;
+  padding: 10px 0;
+  margin-top: 10px;
+  text-align: left;
 }
 
 ul {
@@ -72,7 +78,7 @@ ul {
 }
 
 .results {
-	width: 80%;
+	width: 100%;
   color: white;
 	justify-content: space-evenly;
 }
@@ -80,7 +86,7 @@ ul {
 .cost-pp {
 	width: 100%;
 	text-align: left;
-  font-size: 4rem;
+  font-size: 3rem;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
@@ -110,9 +116,8 @@ ul {
 
 .align-center {
   text-align: center;
-  margin-bottom: 25px;
   background-color: #ad5389;
-  font-size: 4rem;
+  font-size: 3rem;
   border-radius: 15px;
   margin-top: 10px;
 }
@@ -124,7 +129,7 @@ ul {
 	width: auto;
 	text-align: center;
   height: auto;
-  font-size: 4rem;
+  font-size: 3rem;
   border-radius: 15px;
   margin-top: 10px;
 }
@@ -136,7 +141,8 @@ ul {
 
 .guest-count {
 	align-items: center;
-	justify-content: space-evenly;
+  justify-content: space-evenly;
+  margin-top: -40px;
 }
 
 .guest-count i {
@@ -145,7 +151,8 @@ ul {
 
 .guest-count div:nth-child(2) {
 	background-color: #FDFEFD;
-	color: #8FD7CA;
+  color: darkslateblue;
+  font-weight: bold;
 	height: 60px;
 	width: 60px;
 	border-radius: 60px;
@@ -164,6 +171,7 @@ ul {
 	justify-content: center;
   align-items: center;
   margin: 1.5rem 0;
+  margin-top: -20px;
   /*margin: 0;*/
 }
 
@@ -203,8 +211,8 @@ ul {
 	cursor: pointer;
 }
 .keypad li button {
-  width: 18vw;
-  height: 18vw;
+  width: 75px;
+  height: 75px;
 	background: #8E2DE2;  
   background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  
   background: linear-gradient(to bottom, #3c1053, #ad5389);

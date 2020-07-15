@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 
-const tipPercentages = ['5%', '10%', '15%' , '20%'];
+const tipPercentages = ['10%', '15%', '18%' , '20%'];
 
 class Inputs extends Component {
 	constructor(props) {

@@ -9,19 +9,22 @@ const Results = (props) => {
 	}
 	let partyCount = props.partyCount;
 	return (
-		<ul className="results flex-col">
+		<ul className="results flex-row">
 			<li className="cost-pp flex-col">
-				<span>Total</span>
+				<span>Total Bill</span>
 				<span>$ {props.costPerPerson.toFixed(2)}</span>
 			</li>
 			<li className="col-2">
 				<span>Total </span>
-				<span>$ </span><span>{(billTotal / partyCount).toFixed(1)}</span>
+				<span>$</span><span>{(billTotal / partyCount).toFixed(2)}</span>
+                <span>&nbsp; / &nbsp;</span>
+                <span>Tip  </span>
+				<span>$</span><span>{(tipTotal / partyCount).toFixed(2)}</span>
 			</li>
-			<li className="col-2">
+			{/* <li className="col-3">
 				<span>Tip  </span>
-				<span>$ </span><span>{(tipTotal / partyCount).toFixed(1)}</span>
-			</li>
+				<span>$ </span><span>{(tipTotal / partyCount).toFixed(2)}</span>
+			</li> */}
 		</ul>
 	)
 }
