@@ -69,6 +69,7 @@ body {
   padding: 10px 0;
   margin-top: 10px;
   text-align: left;
+  font-size: 21px;
 }
 
 ul {
@@ -116,7 +117,7 @@ ul {
 
 .align-center {
   text-align: center;
-  background-color: #ad5389;
+  background-color: #8E2DE2;
   font-size: 3rem;
   border-radius: 15px;
   margin-top: 10px;
@@ -131,6 +132,8 @@ ul {
   height: auto;
   font-size: 3rem;
   border-radius: 15px;
+  border: 1px dotted white;
+  background-color: transparent;
   margin-top: 10px;
 }
 
@@ -171,7 +174,7 @@ ul {
 	justify-content: center;
   align-items: center;
   margin: 1.5rem 0;
-  margin-top: -20px;
+  margin-top: -25px;
   /*margin: 0;*/
 }
 
@@ -214,8 +217,8 @@ ul {
   width: 75px;
   height: 75px;
 	background: #8E2DE2;  
-  background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  
-  background: linear-gradient(to bottom, #3c1053, #ad5389);
+  /* background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  
+  background: linear-gradient(to bottom, #3c1053, #ad5389); */
 	color: white;
 	border: 1px dotted white;
 	cursor: pointer;
