@@ -16,9 +16,9 @@ const Results = (props) => {
 			</li>
 			<li className="col-2">
                 <span>Split Bill by {partyCount}: </span>
-				<span>Total </span>
+				<span>Bill </span>
 				<span>$</span><span>{(billTotal / partyCount).toFixed(2)}</span>
-                <span>&nbsp; / &nbsp;</span>
+                <span>&nbsp; + &nbsp;</span>
                 <span>Tip  </span>
 				<span>$</span><span>{(tipTotal / partyCount).toFixed(2)}</span>
 			</li>

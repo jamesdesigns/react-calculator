@@ -55,8 +55,8 @@ class Calculator extends Component {
 			newState = '';
 			this.setState({
 				billTotal: newState,
-				numberOfPeople: 2,
-				tipTotal: 0,
+				numberOfPeople: 1,
+                tipTotal: 0,
 				costPP: 0
 			}, function() {
 				this.calculateCosts();

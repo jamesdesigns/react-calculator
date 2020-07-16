@@ -226,6 +226,7 @@ ul {
 	margin: 5px 0;
   font-size: 2.5em;
   border-radius: 50%;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .keypad li button:hover {
