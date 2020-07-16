@@ -15,7 +15,7 @@ const Results = (props) => {
 				<span>$ {props.costPerPerson.toFixed(2)}</span>
 			</li>
 			<li className="col-2">
-                <span>Split Bill by {partyCount}: </span>
+                <span>Split Bill by {partyCount}: </span>&nbsp;&nbsp;
 				<span>Bill </span>
 				<span>$</span><span>{(billTotal / partyCount).toFixed(2)}</span>
                 <span>&nbsp; + &nbsp;</span>
