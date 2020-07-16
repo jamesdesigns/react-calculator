@@ -36,7 +36,8 @@ class Inputs extends Component {
                         <span>Bill Amount</span>
                         <input type="text" defaultValue={this.props.billTotal} onKeyPress={(e) => this.handleKeyPress(e)}  disabled />
                     </div>
-				<div style={{ paddingLeft: '50px'}}  className="guest-count flex-row">
+				<div style={{ paddingLeft: '0'}}  className="guest-count flex-row">
+                <div>Split Bill</div>
 					<div onClick={() => this.props.getPartyCount('minus')}>
 						<p className="icon ion-md-remove">-</p>
 					</div>
