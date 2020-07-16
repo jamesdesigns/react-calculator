@@ -17,7 +17,8 @@ class Calculator extends Component {
 			numberOfPeople: 1,
 			percentages: tipPercentages,
             tipPercent: tipPercentages[0],
-            selectEmoji: emoji[0],
+            feelings: emoji,
+            selectFeelings: emoji[0],
 			tipTotal: 0,
 			costPP: 0
 		};
@@ -91,13 +92,18 @@ class Calculator extends Component {
 	}
 
 	getTipPercentage(i) {
-		let newState = this.state.percentages[i];
+        let newState = this.state.percentages[i];
+        let newRating = this.state.feelings[i];
+        console.log(newState);
+        console.log(newRating);
+
 		this.setState({
-			tipPercent: newState
+            tipPercent: newState,
+            selectEmoji: newRating
 		}, function() {
 			this.calculateCosts();
 		}
-		);
+		); 
 	}
 
 	calculateCosts() {
