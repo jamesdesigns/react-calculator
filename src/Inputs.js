@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 const tipPercentages = ['10%', '15%', '18%' , '20%'];
-const ratingsEmoji = ['😐','😏','😊','😃'];
+// const emoji = ['😐','😏','😊','😃'];
 
 class Inputs extends Component {
 	constructor(props) {
@@ -23,7 +23,7 @@ class Inputs extends Component {
 
 	handleTipSelect(i) {
 		this.setState({ active: i });
-		this.props.getTipPercentage(i)
+        this.props.getTipPercentage(i)
 	}
 
 	render() {
@@ -60,15 +60,15 @@ class Inputs extends Component {
                             ))
 						}
 					</ul>
-                    <div style={{ backgroundColor: 'transparent', fontSize: '45px'}}  className="flex-row">
+                    {/* <div style={{ backgroundColor: 'transparent', fontSize: '45px'}}  className="flex-row">
                         {
-							ratingsEmoji.map((el, i) => (
+							emoji.map((el, i) => (
 								<p className={this.handleStyleChange(i)} key={el} onClick={() => this.handleTipSelect(i)}>
 									{el}
 								</p>
 							))
 						}  
-                    </div>	
+                    </div>	 */}
 				</div>
 
 			</div>

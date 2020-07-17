@@ -5,7 +5,7 @@ import Inputs from './Inputs';
 import Buttons from './Buttons';
 const btnsValue = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
 const tipPercentages = [.10, .15, .18, .20];
-const emoji = ['😐','😏','😊','😃'];
+const emoji = ['😠','😏','😊','😍'];
 
 class Calculator extends Component {
 	constructor(props) {
@@ -16,7 +16,6 @@ class Calculator extends Component {
 			billTotal: '',
 			numberOfPeople: 1,
 			percentages: tipPercentages,
-            // tipPercent: tipPercentages[0],
             ratings: emoji,
 			tipTotal: 0,
 			costPP: 0
@@ -57,7 +56,8 @@ class Calculator extends Component {
 				billTotal: newState,
 				numberOfPeople: 1,
                 tipTotal: 0,
-				costPP: 0
+                costPP: 0,
+                ratings: false
 			}, function() {
 				this.calculateCosts();
 			});
@@ -132,7 +132,7 @@ class Calculator extends Component {
 					<Inputs 
 					billTotal={this.state.billTotal} 
                     tipTotal={this.state.tipTotal}
-                    ratings={this.state}
+                    ratings={this.state.ratings}
 					getPartyCount={this.updatePartyCount} 
 					partyCount={this.state.numberOfPeople} 
 					getTipPercentage={this.getTipPercentage}
