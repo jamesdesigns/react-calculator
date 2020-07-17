@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 const tipPercentages = ['10%', '15%', '18%' , '20%'];
+const ratingsEmoji = ['😐','😏','😊','😃'];
 
 class Inputs extends Component {
 	constructor(props) {
@@ -30,7 +31,17 @@ class Inputs extends Component {
 			<div className="inputs flex-col">
                     <div style={{ paddingLeft: '50px'}} className="tip-total flex-col">
                         <span>Tip Total </span>
-                        <span className="align-center">$ {this.props.tipTotal.toFixed(2)}</span>	
+                        <span className="align-center">$ {this.props.tipTotal.toFixed(2)} + {this.props.ratingsEmoji}</span>
+                        <ul>
+                        {
+							ratingsEmoji.map((el, i) => (
+								<li className={this.handleStyleChange(i)} key={el} onClick={() => this.handleTipSelect(i)}>
+									{el}
+								</li>
+							))
+						}
+                            <li></li>    
+                        </ul>	
                     </div>	
                     <div style={{ paddingLeft: '50px'}} className="bill-total flex-col">
                         <span>Bill Amount</span>
