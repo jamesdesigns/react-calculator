@@ -12,6 +12,7 @@ const Results = (props) => {
 			<li className="cost-pp flex-col">
 				<span>Total Bill</span>
 				<span>$ {props.costPerPerson.toFixed(2)}</span>
+                <span>{props.ratings}</span>
 			</li>
 			<li className="col-2">
                 <span>Split Bill by {partyCount}: </span>&nbsp;&nbsp;

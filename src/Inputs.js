@@ -31,17 +31,7 @@ class Inputs extends Component {
 			<div className="inputs flex-col">
                     <div style={{ paddingLeft: '50px'}} className="tip-total flex-col">
                         <span>Tip Total </span>
-                        <span className="align-center">$ {this.props.tipTotal.toFixed(2)} + {this.props.ratingsEmoji}</span>
-                        <ul>
-                        {
-							ratingsEmoji.map((el, i) => (
-								<li className={this.handleStyleChange(i)} key={el} onClick={() => this.handleTipSelect(i)}>
-									{el}
-								</li>
-							))
-						}
-                            <li></li>    
-                        </ul>	
+                        <span className="align-center">$ {this.props.tipTotal.toFixed(2)}</span>
                     </div>	
                     <div style={{ paddingLeft: '50px'}} className="bill-total flex-col">
                         <span>Bill Amount</span>
@@ -67,9 +57,18 @@ class Inputs extends Component {
 								<li className={this.handleStyleChange(i)} key={el} onClick={() => this.handleTipSelect(i)}>
 									{el}
 								</li>
-							))
+                            ))
 						}
 					</ul>
+                    <div style={{ backgroundColor: 'transparent', fontSize: '35px'}}  className="flex-row">
+                        {
+							ratingsEmoji.map((el, i) => (
+								<p className={this.handleStyleChange(i)} key={el} onClick={() => this.handleTipSelect(i)}>
+									{el}
+								</p>
+							))
+						}  
+                    </div>	
 				</div>
 
 			</div>
