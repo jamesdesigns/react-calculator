@@ -60,7 +60,7 @@ class Inputs extends Component {
                             ))
 						}
 					</ul>
-                    <div style={{ backgroundColor: 'transparent', fontSize: '35px'}}  className="flex-row">
+                    <div style={{ backgroundColor: 'transparent', fontSize: '45px'}}  className="flex-row">
                         {
 							ratingsEmoji.map((el, i) => (
 								<p className={this.handleStyleChange(i)} key={el} onClick={() => this.handleTipSelect(i)}>
