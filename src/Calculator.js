@@ -17,8 +17,7 @@ class Calculator extends Component {
 			numberOfPeople: 1,
 			percentages: tipPercentages,
             tipPercent: tipPercentages[0],
-            feelings: emoji,
-            selectFeelings: emoji[0],
+            ratings: emoji,
 			tipTotal: 0,
 			costPP: 0
 		};
@@ -93,7 +92,7 @@ class Calculator extends Component {
 
 	getTipPercentage(i) {
         let newState = this.state.percentages[i];
-        let newRating = this.state.feelings[i];
+        let newRating = this.state.ratings[i];
         console.log(newState);
         console.log(newRating);
 
@@ -109,13 +108,15 @@ class Calculator extends Component {
 	calculateCosts() {
 		let newBillTotal = parseFloat(this.state.billTotal);
 		if(!Number.isNaN(newBillTotal)) {
-			let newTipTotal, newCostPP;
-			newTipTotal = parseFloat(newBillTotal * this.state.tipPercent);
+			let newTipTotal, newCostPP, newEmoji; // newEmoji
+            newTipTotal = parseFloat(newBillTotal * this.state.tipPercent);
+            newEmoji = this.state.selectEmoji; // newEmoji
 			newCostPP = newBillTotal + newTipTotal; 
 			newCostPP = newCostPP / this.state.numberOfPeople;
 	    this.setState({
 			tipTotal: newTipTotal,
-			costPP: newCostPP
+            costPP: newCostPP,
+            emoji: newEmoji
 		});
 		}
 	}
@@ -127,10 +128,11 @@ class Calculator extends Component {
 					costPerPerson={this.state.costPP} 
 					billTotal={this.state.billTotal}
 					tipTotal={this.state.tipTotal}
-					partyCount={this.state.numberOfPeople} />
+                    partyCount={this.state.numberOfPeople}
+                    emoji={this.state.emoji} />
 					<Inputs 
 					billTotal={this.state.billTotal} 
-					tipTotal={this.state.tipTotal}
+                    tipTotal={this.state.tipTotal}
 					getPartyCount={this.updatePartyCount} 
 					partyCount={this.state.numberOfPeople} 
 					getTipPercentage={this.getTipPercentage}

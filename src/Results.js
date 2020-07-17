@@ -2,8 +2,7 @@ import React from 'react';
 
 const Results = (props) => {
 	let tipTotal = parseFloat(props.tipTotal);
-	let billTotal = parseFloat(props.billTotal
-		);
+    let billTotal = parseFloat(props.billTotal);
 	if (isNaN(billTotal)) {
 		billTotal = '';
 	}
