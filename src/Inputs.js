@@ -28,7 +28,7 @@ class Inputs extends Component {
 
 	render() {
 		return (
-			<div className="inputs flex-col">
+			<div style={{marginRight: '45px'}} className="inputs flex-col">
                     <div style={{ paddingLeft: '50px'}} className="tip-total flex-col">
                         <span>Tip Total </span>
                         <span className="align-center">$ {this.props.tipTotal.toFixed(2)}</span>
