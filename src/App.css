@@ -75,12 +75,12 @@ body {
 }
 
 .col-2 {
-  width: 100%;
+  width: 90%;
   border-top: 1px dotted white;
   padding: 10px 0;
   margin-top: 13px;
   text-align: left;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 ul {
@@ -98,7 +98,7 @@ ul {
 }
 
 .cost-pp {
-	width: 100%;
+	width: 90%;
 	text-align: left;
   font-size: 3rem;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
@@ -126,6 +126,7 @@ ul {
 	padding-top: 10px;
   padding-bottom: 10px;
   width: auto;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .align-center {
@@ -162,6 +163,7 @@ ul {
   justify-content: space-evenly;
   margin-top: -40px;
   margin-left: 20px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .guest-count i {
@@ -221,6 +223,7 @@ ul {
   /* background-color: #fc00ff; */
   font-size: 2rem;
   margin-top: 5px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 
