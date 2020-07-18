@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  /* border: 1px dotted white; */
   border-radius: 15px;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -50,16 +49,10 @@ body {
 }
 
 #root {
-  /* width: 85%;
-  height: auto; */
   width: 450px;
   height: 1050px;
   color: white;
   margin: 0 auto;
-  /* background-color: black; */
-	/* background: #8E2DE2;  
-  background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  
-  background: linear-gradient(to bottom, #3c1053, #ad5389);  */
 	padding: 10px;
 }
 
@@ -110,19 +103,14 @@ ul {
 .guest-count,
 .tip-percent, 
 .tip-total {
-  /* width: 48%; */
 	color: #FDFEFD;
-	/* background-color: #ad5389; */
 	border-radius: 10px;
   margin-bottom: 10px;
   font-size: 2rem;
   text-align: left;
-  /* margin-left: 30px; */
 }
 
 .bill-total {
-	/* justify-content: center;
-	align-items: center; */
 	padding-top: 10px;
   padding-bottom: 10px;
   width: auto;
@@ -139,7 +127,6 @@ ul {
 }
 
 .bill-total input {
-	/* background-color: #ad5389; */
 	color: #FDFEFD;
 	border:none;
 	width: auto;
@@ -220,7 +207,6 @@ ul {
 	height: 100px;
 	justify-content: center;
   text-align: left;
-  /* background-color: #fc00ff; */
   font-size: 2rem;
   margin-top: 5px;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
@@ -236,8 +222,6 @@ ul {
   width: 75px;
   height: 75px;
 	background: #8E2DE2;  
-  /* background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  
-  background: linear-gradient(to bottom, #3c1053, #ad5389); */
 	color: white;
 	border: 1px dotted white;
 	cursor: pointer;
