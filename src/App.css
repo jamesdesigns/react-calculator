@@ -144,13 +144,11 @@ ul {
 	outline: none;
 }
 
-
 .guest-count {
 	align-items: center;
   justify-content: space-evenly;
   margin-top: -40px;
   margin-left: 20px;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .guest-count i {

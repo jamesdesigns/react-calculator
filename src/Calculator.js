@@ -57,7 +57,7 @@ class Calculator extends Component {
 				numberOfPeople: 1,
                 tipTotal: 0,
                 costPP: 0,
-                ratings: false
+                // ratings: false
 			}, function() {
 				this.calculateCosts();
 			});
@@ -92,6 +92,7 @@ class Calculator extends Component {
 
 	getTipPercentage(i) {
         let newState = this.state.percentages[i];
+
         // let newRating = this.state.ratings[i];
         console.log(newState);
         // console.log(newRating);
@@ -107,7 +108,7 @@ class Calculator extends Component {
 	calculateCosts() {
 		let newBillTotal = parseFloat(this.state.billTotal);
 		if(!Number.isNaN(newBillTotal)) {
-			let newTipTotal, newCostPP, newRating; // newRatings
+			let newTipTotal, newCostPP; // newRating; 
             newTipTotal = parseFloat(newBillTotal * this.state.tipPercent);
             // newRating = this.state.selectEmoji; 
 			newCostPP = newBillTotal + newTipTotal; 
