@@ -9,7 +9,7 @@ const Results = (props) => {
 	}
 	let partyCount = props.partyCount;
 	return (
-		<ul style={{ backgroundColor: '#181818', padding: '30px 0 15px 26px', borderTopLeftRadius: '15px', borderTopRightRadius: '15px', marginTop: '1px'}} className="results flex-row">
+		<ul style={{ backgroundColor: '#181818', padding: '30px 30px 15px 26px', borderTopLeftRadius: '15px', borderTopRightRadius: '15px', marginTop: '1px', marginTop: '10px'}} className="results flex-row">
 			<li className="cost-pp flex-col">
 				<span>Total Bill</span>
 				<span>$ {props.costPerPerson.toFixed(2)}</span>

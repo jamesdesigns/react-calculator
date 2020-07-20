@@ -29,11 +29,11 @@ class Inputs extends Component {
 	render() {
 		return (
 			<div style={{marginRight: '45px'}} className="inputs flex-col">
-                    <div style={{ paddingLeft: '50px'}} className="tip-total flex-col">
+                    <div style={{ paddingLeft: '48px'}} className="tip-total flex-col">
                         <span>Tip Total </span>
                         <span className="align-center">$ {this.props.tipTotal.toFixed(2)}</span>
                     </div>	
-                    <div style={{ paddingLeft: '50px'}} className="bill-total flex-col">
+                    <div style={{ paddingLeft: '48px'}} className="bill-total flex-col">
                         <span>Bill Amount</span>
                         <input type="text" defaultValue={this.props.billTotal} onKeyPress={(e) => this.handleKeyPress(e)}  disabled />
                     </div>
@@ -50,7 +50,7 @@ class Inputs extends Component {
 						<p className="icon ion-md-add">+</p>
 					</div>
 				</div>
-				<div style={{ paddingLeft: '50px'}}  className="tip-percent flex-col">
+				<div style={{ paddingLeft: '48px'}}  className="tip-percent flex-col">
 					<ul>
 						{
 							tipPercentages.map((el, i) => (
