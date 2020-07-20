@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## React Tip Calculator
+
+This is a simple tip calculator build in React. 
+You can view this project here: [React Tip Calculator](https://5f152202d6f3076c7b457055--agitated-payne-af112e.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
