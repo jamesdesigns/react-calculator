@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## React Tip Calculator
 
 This is a simple tip calculator built in React. 
-You can view this project here: [React Tip Calculator](https://5f167c0a0ca72ecb43b3fabc--agitated-payne-af112e.netlify.app/)
+You can view this project here: [React Tip Calculator](https://5f167f930ca72e0998b3fa58--agitated-payne-af112e.netlify.app/)
 
 ## Available Scripts
 
