@@ -50,16 +50,16 @@ body {
 
 #root {
   width: 425px;
-  height: auto;
+  height: 750px;
   color: white;
   margin: 0 auto;
-	padding: 10px;
+  padding: 10px;
 }
 
 .flex-row {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 }
 
 .flex-col {
@@ -222,7 +222,7 @@ ul {
 	color: white;
 	border: 1px dotted white;
 	cursor: pointer;
-	margin: 5px 0;
+	margin: 5px;
   font-size: 2rem;
   border-radius: 50%;
   text-align: center;
@@ -237,10 +237,6 @@ ul {
 
 .keypad li button:focus {
 	outline: none;
-}
-
-button:last-child {
-  background-color: orange;
 }
 
 .icon {
