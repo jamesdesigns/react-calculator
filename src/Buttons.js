@@ -2,7 +2,7 @@ import React from 'react';
 
 const Buttons = (props) => {
 	return (
-		<ul style={{ paddingLeft: '20px'}}  className="flex-row keypad">
+		<ul style={{ paddingLeft: '0'}}  className="flex-row keypad">
 			{props.buttons.map((btn,i) => {
 				return (
 					<li key={`btn-${i}`}>
