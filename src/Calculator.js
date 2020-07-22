@@ -37,7 +37,6 @@ class Calculator extends Component {
 
 	updateBillTotal(i) {
         let newState;
-        let newRating;
 
 		if(this.state.clickedBtn === '.' && this.state.billTotal.includes('.')) {		
 			return null;
@@ -53,7 +52,7 @@ class Calculator extends Component {
 			);
 		} else{
             newState = '';
-            newRating = '';
+
 			this.setState({
 				billTotal: newState,
 				numberOfPeople: 1,
