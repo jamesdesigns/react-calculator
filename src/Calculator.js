@@ -141,7 +141,7 @@ class Calculator extends Component {
 					partyCount={this.state.numberOfPeople} 
 					getTipPercentage={this.getTipPercentage}
 					handleInputChange={this.handleInputChange} />
-				<Buttons style={{textAlign: 'center'}} onClickButton={this.onClickButton} buttons={this.state.buttons} />
+				<Buttons onClickButton={this.onClickButton} buttons={this.state.buttons} />
 			</div>
 		)
 	}
