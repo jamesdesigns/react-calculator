@@ -212,7 +212,7 @@ ul {
 
 /*KEYPAD*/
 .keypad li {
-  width: 32%;
+  /* width: 32%; */
 	cursor: pointer;
 }
 .keypad li button {
