@@ -5,7 +5,7 @@ import Inputs from './Inputs';
 import Buttons from './Buttons';
 const btnsValue = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
 const tipPercentages = [.10, .15, .18, .20];
-const emoji = ['😠','😏','😊','😍'];
+const tipEmoji = ['😠','😏','😊','😍'];
 
 class Calculator extends Component {
 	constructor(props) {
@@ -16,7 +16,7 @@ class Calculator extends Component {
 			billTotal: '',
 			numberOfPeople: 1,
 			percentages: tipPercentages,
-            ratings: emoji,
+            emoji: tipEmoji,
 			tipTotal: 0,
 			costPP: 0
 		};
@@ -57,7 +57,7 @@ class Calculator extends Component {
 				numberOfPeople: 1,
                 tipTotal: 0,
                 costPP: 0,
-                // ratings: false
+                // emoji: false
 			}, function() {
 				this.calculateCosts();
 			});
@@ -92,7 +92,7 @@ class Calculator extends Component {
 
 	getTipPercentage(i) {
         let newState = this.state.percentages[i];
-        let newRating = this.state.ratings[i];
+        let newRating = this.state.emoji[i];
         console.log(newState);
         console.log(newRating);
 		this.setState({
@@ -118,7 +118,7 @@ class Calculator extends Component {
 	    this.setState({
 			tipTotal: newTipTotal,
             costPP: newCostPP,
-            ratings: newRating
+            emoji: newRating
 		});
 		}
 	}
@@ -131,12 +131,12 @@ class Calculator extends Component {
 					billTotal={this.state.billTotal}
 					tipTotal={this.state.tipTotal}
                     partyCount={this.state.numberOfPeople}
-                    ratings={this.state.ratings} 
+                    emoji={this.state.emoji} 
                     />
 					<Inputs 
 					billTotal={this.state.billTotal} 
                     tipTotal={this.state.tipTotal}
-                    ratings={this.state.ratings}
+                    emoji={this.state.emoji}
 					getPartyCount={this.updatePartyCount} 
 					partyCount={this.state.numberOfPeople} 
 					getTipPercentage={this.getTipPercentage}
