@@ -6,7 +6,7 @@ const Buttons = (props) => {
 			{props.buttons.map((btn,i) => {
 				return (
 					<li key={`btn-${i}`}>
-						<button style={{margin: '0 auto'}} onClick={e => props.onClickButton(i)}>{btn}</button>
+						<button onClick={e => props.onClickButton(i)}><span style={{margin: '0 auto'}}>{btn}</span></button>
 					</li>
 				)
 			})}
