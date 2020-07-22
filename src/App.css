@@ -103,7 +103,7 @@ ul {
 .guest-count,
 .tip-percent, 
 .tip-total {
-	color: #FDFEFD;
+	color: #FFFFFF;
 	border-radius: 10px;
   font-size: 1.5rem;
   text-align: left;
@@ -126,7 +126,7 @@ ul {
 }
 
 .bill-total input {
-	color: #FDFEFD;
+	color: #FFFFFF;
 	border:none;
 	width: auto;
 	text-align: center;
