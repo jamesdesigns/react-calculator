@@ -7,16 +7,15 @@ const Results = (props) => {
 
 	if (isNaN(billTotal)) {
 		billTotal = '';
-	}
+    }
+    
 	let partyCount = props.partyCount;
 	return (
 		<ul style={{ backgroundColor: '#181818', padding: '30px 30px 15px 26px', borderTopLeftRadius: '15px', borderTopRightRadius: '15px', marginTop: '10px'}} className="results flex-row">
 			<li className="cost-pp flex-col">
+                <span style={{textAlign: 'center', marginLeft: '10px', fontSize: '4rem'}}>{emoji}</span>
 				<span>Total Bill</span>
 				<span>$ {props.costPerPerson.toFixed(2)}</span>
-                <span style={{textAlign: 'right', marginTop: '-75px', fontSize: '3.5rem'}}>
-                    {emoji} 
-                </span>
 			</li>
 			<li className="col-2">
                 <span>Split Bill by {partyCount}: </span>&nbsp;&nbsp;

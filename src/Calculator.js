@@ -36,14 +36,15 @@ class Calculator extends Component {
 	}
 
 	updateBillTotal(i) {
-		let newState;
+        let newState;
+        let newRating;
 
 		if(this.state.clickedBtn === '.' && this.state.billTotal.includes('.')) {		
 			return null;
 		}  
 
 		if(this.state.clickedBtn !== 'C') {
-			newState = this.state.billTotal + this.state.clickedBtn;
+            newState = this.state.billTotal + this.state.clickedBtn;
 			this.setState({
 				billTotal: newState
 			}, function() {
@@ -51,13 +52,14 @@ class Calculator extends Component {
 			}
 			);
 		} else{
-			newState = '';
+            newState = '';
+            newRating = '';
 			this.setState({
 				billTotal: newState,
 				numberOfPeople: 1,
                 tipTotal: 0,
                 costPP: 0,
-                // emoji: false
+                emoji: false
 			}, function() {
 				this.calculateCosts();
 			});
@@ -93,6 +95,7 @@ class Calculator extends Component {
 	getTipPercentage(i) {
         let newState = this.state.percentages[i];
         let newRating = this.state.emoji[i];
+
         console.log(newState);
         console.log(newRating);
 		this.setState({
