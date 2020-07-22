@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 const tipPercentages = ['10%', '15%', '18%' , '20%'];
-// const emoji = ['😐','😏','😊','😃'];
+const emoji = ['😐','😏','😊','😃'];
 
 class Inputs extends Component {
 	constructor(props) {

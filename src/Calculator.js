@@ -5,7 +5,7 @@ import Inputs from './Inputs';
 import Buttons from './Buttons';
 const btnsValue = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
 const tipPercentages = [.10, .15, .18, .20];
-// const emoji = ['😠','😏','😊','😍'];
+const emoji = ['😠','😏','😊','😍'];
 
 class Calculator extends Component {
 	constructor(props) {
@@ -16,7 +16,7 @@ class Calculator extends Component {
 			billTotal: '',
 			numberOfPeople: 1,
 			percentages: tipPercentages,
-            // ratings: emoji,
+            ratings: emoji,
 			tipTotal: 0,
 			costPP: 0
 		};
@@ -92,12 +92,12 @@ class Calculator extends Component {
 
 	getTipPercentage(i) {
         let newState = this.state.percentages[i];
-        // let newRating = this.state.ratings[i];
+        let newRating = this.state.ratings[i];
         console.log(newState);
-        // console.log(newRating);
+        console.log(newRating);
 		this.setState({
             tipPercent: newState,
-            // selectEmoji: newRating
+            selectEmoji: newRating
 		}, function() {
 			this.calculateCosts();
 		}
@@ -107,18 +107,18 @@ class Calculator extends Component {
 	calculateCosts() {
 		let newBillTotal = parseFloat(this.state.billTotal);
 		if(!Number.isNaN(newBillTotal)) {
-			let newTipTotal, newCostPP; // newRating; 
+			let newTipTotal, newCostPP, newRating; // newRating; 
             newTipTotal = parseFloat(newBillTotal * this.state.tipPercent);
             if(!newTipTotal) {
                 newTipTotal = parseFloat(newBillTotal * .10);
             }
-            // newRating = this.state.selectEmoji; 
+            newRating = this.state.selectEmoji; 
 			newCostPP = newBillTotal + newTipTotal; 
 			newCostPP = newCostPP / this.state.numberOfPeople;
 	    this.setState({
 			tipTotal: newTipTotal,
             costPP: newCostPP,
-            // ratings: newRating
+            ratings: newRating
 		});
 		}
 	}
@@ -131,12 +131,12 @@ class Calculator extends Component {
 					billTotal={this.state.billTotal}
 					tipTotal={this.state.tipTotal}
                     partyCount={this.state.numberOfPeople}
-                    // ratings={this.state.ratings} 
+                    ratings={this.state.ratings} 
                     />
 					<Inputs 
 					billTotal={this.state.billTotal} 
                     tipTotal={this.state.tipTotal}
-                    // ratings={this.state.ratings}
+                    ratings={this.state.ratings}
 					getPartyCount={this.updatePartyCount} 
 					partyCount={this.state.numberOfPeople} 
 					getTipPercentage={this.getTipPercentage}
