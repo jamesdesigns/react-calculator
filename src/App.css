@@ -78,10 +78,9 @@ body {
 
 ul {
 	list-style: none;
-	padding: 0;
 	/* width: 90%; */
   margin-top: -18px;
-  padding-bottom: 25px;
+  padding: 0 10px 25px;
 }
 
 .results {

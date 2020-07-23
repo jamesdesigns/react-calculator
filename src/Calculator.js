@@ -5,7 +5,7 @@ import Inputs from './Inputs';
 import Buttons from './Buttons';
 const btnsValue = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
 const tipPercentages = [.10, .15, .18, .20];
-const tipEmoji = [' 🤬','😌','😊','😍'];
+const tipEmoji = [' 🤬','😌','😃','😍'];
 
 class Calculator extends Component {
 	constructor(props) {
@@ -45,12 +45,12 @@ class Calculator extends Component {
 		if(this.state.clickedBtn !== 'C') {
             newState = this.state.billTotal + this.state.clickedBtn;
 			this.setState({
-				billTotal: newState
+                billTotal: newState
 			}, function() {
 				this.calculateCosts();
 			}
 			);
-		} else{
+		} else {
             newState = '';
 
 			this.setState({
@@ -97,6 +97,10 @@ class Calculator extends Component {
 
         console.log(newState);
         console.log(newRating);
+
+        // if(this.state.clickedBtn === this.state.emoji[0] ) {
+        //     return '🤬'
+        // }
 		this.setState({
             tipPercent: newState,
             selectEmoji: newRating
