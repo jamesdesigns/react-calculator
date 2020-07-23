@@ -5,7 +5,7 @@ import Inputs from './Inputs';
 import Buttons from './Buttons';
 const btnsValue = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
 const tipPercentages = [.10, .15, .18, .20];
-const tipEmoji = ['😠','😏','😊','😍'];
+const tipEmoji = [' 🤬','😌','😊','😍'];
 
 class Calculator extends Component {
 	constructor(props) {
