@@ -4,7 +4,7 @@ import logo from './logo.svg';
 const Results = (props) => {
 	let tipTotal = parseFloat(props.tipTotal);
     let billTotal = parseFloat(props.billTotal);
-    let emoji = props.emoji;
+    // let emoji = props.emoji;
 
 	if (isNaN(billTotal)) {
 		billTotal = '';
