@@ -103,7 +103,7 @@ class Calculator extends Component {
         //     return '🤬'
         // }
 		this.setState({
-            tipPercent: newState,
+            tipPercent: newState
             // selectEmoji: newRating
 		}, function() {
 			this.calculateCosts();
@@ -124,7 +124,7 @@ class Calculator extends Component {
 			newCostPP = newCostPP / this.state.numberOfPeople;
 	    this.setState({
 			tipTotal: newTipTotal,
-            costPP: newCostPP,
+            costPP: newCostPP
             // emoji: newRating
 		});
 		}
