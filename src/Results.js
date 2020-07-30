@@ -4,7 +4,6 @@ import logo from './logo.svg';
 const Results = (props) => {
 	let tipTotal = parseFloat(props.tipTotal);
     let billTotal = parseFloat(props.billTotal);
-    // let emoji = props.emoji;
 
 	if (isNaN(billTotal)) {
 		billTotal = '';
@@ -14,8 +13,7 @@ const Results = (props) => {
 	return (
 		<ul style={{ backgroundColor: '#181818', padding: '30px 30px 15px 26px', borderTopLeftRadius: '15px', borderTopRightRadius: '15px', marginTop: '10px'}} className="results flex-row">
 			<li className="cost-pp flex-col">
-                <img style={{ width: '80px', height: '80px', marginLeft: '78%', marginBottom: '-75px'}} src={logo} alt="Qr Code" />
-                {/* <span style={{textAlign: 'center', marginLeft: '10px', fontSize: '4rem'}}>{emoji}</span> */}
+                <img style={{ width: '80px', height: '80px', marginLeft: '78%', marginBottom: '-75px'}} src={logo} alt="QR Code" />
 				<span>Total Bill</span>
 				<span>$ {props.costPerPerson.toFixed(2)}</span>
 			</li>
@@ -27,10 +25,6 @@ const Results = (props) => {
                 <span>Tip  </span>
 				<span>$</span><span>{(tipTotal / partyCount).toFixed(2)}</span>
 			</li>
-			{/* <li className="col-3">
-				<span>Tip  </span>
-				<span>$ </span><span>{(tipTotal / partyCount).toFixed(2)}</span>
-			</li> */}
 		</ul>
 	)
 }
