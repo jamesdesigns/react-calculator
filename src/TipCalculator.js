@@ -15,17 +15,17 @@ class TipCalculator extends Component {
 		this.state = {
 			buttons: btnValues,
 			clickedBtn: '',
-			totalBill: '',
+			billTotal: '',
 			numberOfPeople: 1,
 			percentages: tipPercentages,
 			tipTotal: 0,
-			costForEachPerson: 0
+			costPP: 0
 		};
 
 		// Binding is necessary to make `this` work in the callback
 		this.onClickBtn = this.onClickBtn.bind(this);
-		this.updateTotalBill = this.updateTotalBill.bind(this);
-		this.updateSplitBill = this.updateSplitBill.bind(this);
+		this.updatebillTotal = this.updatebillTotal.bind(this);
+		this.updatePartyCount = this.updatePartyCount.bind(this);
 		this.getTipPercentage = this.getTipPercentage.bind(this);
 	}
 
@@ -34,42 +34,42 @@ class TipCalculator extends Component {
 		this.setState({
 			clickedBtn: this.state.buttons[i]
 		}, function() {
-			this.updateTotalBill(i);
+			this.updatebillTotal(i);
 		});	
 	}
 
 	// This function updates if the user enters a Bill Amount and can also Clear out the total if the user clicks 'C' 
-	updateTotalBill(i) {
+	updatebillTotal(i) {
         let newState;
 
-		if(this.state.clickedBtn === '.' && this.state.totalBill.includes('.')) {		
+		if(this.state.clickedBtn === '.' && this.state.billTotal.includes('.')) {		
 			return null;
 		}  
 
 		if(this.state.clickedBtn !== 'C') {
-            newState = this.state.totalBill + this.state.clickedBtn;
+            newState = this.state.billTotal + this.state.clickedBtn;
 			this.setState({
-                totalBill: newState
+                billTotal: newState
 			}, function() {
-				this.calculateBill();
+				this.calculateCosts();
 			}
 			);
 		} else {
             newState = '';
 			// This clears out everything when the user clicks the Clear(C) button
 			this.setState({
-				totalBill: newState,
+				billTotal: newState,
 				numberOfPeople: 1,
                 tipTotal: 0,
-                costForEachPerson: 0,
+                costPP: 0,
 			}, function() {
-				this.calculateBill();
+				this.calculateCosts();
 			});
 		}
 	}
 
 	// This updates the Split Bill based on what the user selects ( -/+ )
-	updateSplitBill(sum) {
+	updatePartyCount(sum) {
 		let newState;
 		// Increment +1 when the user clicks the '+' icon and save this to setState()
 		if(sum === 'add') {
@@ -77,7 +77,7 @@ class TipCalculator extends Component {
 			this.setState({
 				numberOfPeople: newState
 			}, function() {
-			this.calculateBill();
+			this.calculateCosts();
 		});
 		}
 		// Decrement -1 when the user clicks the '-' icon if it is greater than 1 and save this to setState()
@@ -86,13 +86,13 @@ class TipCalculator extends Component {
 			this.setState({
 				numberOfPeople: newState
 			}, function() {
-				this.calculateBill();
+				this.calculateCosts();
 			});
 		} else {
 			this.setState({
 				numberOfPeople: this.state.numberOfPeople
 				}, function() {
-				this.calculateBill();
+				this.calculateCosts();
 			});
 		}
 	}
@@ -104,29 +104,29 @@ class TipCalculator extends Component {
 		this.setState({
             tipPercent: newState
 		}, function() {
-			this.calculateBill();
+			this.calculateCosts();
 		}
         ); 
 	}
 
 	// This calculates the new Total Bill
-	calculateBill() {
-		let newtotalBill = parseFloat(this.state.totalBill);
-		if(!Number.isNaN(newtotalBill)) {
+	calculateCosts() {
+		let newBillTotal = parseFloat(this.state.billTotal);
+		if(!Number.isNaN(newBillTotal)) {
 			// Declare variables for the new tip total and the new cost for each person
-			let newTipTotal, newCostForEachPerson;
-            newTipTotal = parseFloat(newtotalBill * this.state.tipPercent);
+			let newTipTotal, newCostPP;
+            newTipTotal = parseFloat(newBillTotal * this.state.tipPercent);
             if(!newTipTotal) {
 				//  It is set to a default of .10 percent if the user does not click a percentage amount
-                newTipTotal = parseFloat(newtotalBill * .10);
+                newTipTotal = parseFloat(newBillTotal * .10);
             }
 
-			newCostForEachPerson = newtotalBill + newTipTotal; 
-			newCostForEachPerson = newCostForEachPerson / this.state.numberOfPeople;
+			newCostPP = newBillTotal + newTipTotal; 
+			newCostPP = newCostPP / this.state.numberOfPeople;
 
 	    this.setState({
 			tipTotal: newTipTotal,
-            costForEachPerson: newCostForEachPerson
+            costPP: newCostPP
 		});
 		}
 	}
@@ -136,15 +136,15 @@ class TipCalculator extends Component {
 		return (
 			<div>
 				<Results 
-					costPerPerson={this.state.costForEachPerson} 
-					totalBill={this.state.totalBill}
+					costPerPerson={this.state.costPP} 
+					billTotal={this.state.billTotal}
 					tipTotal={this.state.tipTotal}
-                    splitCount={this.state.numberOfPeople} />
+                    partyCount={this.state.numberOfPeople} />
 				<Inputs 
-					totalBill={this.state.totalBill} 
+					billTotal={this.state.billTotal} 
                     tipTotal={this.state.tipTotal}
-					getSplitAmount={this.updateSplitBill} 
-					splitCount={this.state.numberOfPeople} 
+					getPartyCount={this.updatePartyCount} 
+					partyCount={this.state.numberOfPeople} 
 					getTipPercentage={this.getTipPercentage}
 					handleInputChange={this.handleInputChange} />
 				<Buttons onClickBtn={this.onClickBtn} buttons={this.state.buttons} />

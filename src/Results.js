@@ -3,13 +3,13 @@ import logo from './logo.svg';
 
 const Results = (props) => {
 	let tipTotal = parseFloat(props.tipTotal);
-    let billAmount = parseFloat(props.billAmount);
+    let billTotal = parseFloat(props.billTotal);
 
-	if (isNaN(billAmount)) {
-		billAmount = '';
+	if (isNaN(billTotal)) {
+		billTotal = '';
     }
     
-	let splitCount = props.splitCount;
+	let partyCount = props.partyCount;
 	
 	// This will output the Total Bill, including the Split Bill by an amount of each person splitting the bill 
 	return (
@@ -21,12 +21,12 @@ const Results = (props) => {
 			</li>
 
 			<li className="col-2">
-                <span>Split Bill by {splitCount}: </span>&nbsp;&nbsp;
+                <span>Split Bill by {partyCount}: </span>&nbsp;&nbsp;
 				<span>Bill </span>
-				<span>$</span><span>{(billAmount / splitCount).toFixed(2)}</span>
+				<span>$</span><span>{(billTotal / partyCount).toFixed(2)}</span>
                 <span>&nbsp; + &nbsp;</span>
                 <span>Tip  </span>
-				<span>$</span><span>{(tipTotal / splitCount).toFixed(2)}</span>
+				<span>$</span><span>{(tipTotal / partyCount).toFixed(2)}</span>
 			</li>
 		</ul>
 	)

@@ -40,19 +40,19 @@ class Inputs extends Component {
 
 				<div style={{ paddingLeft: '48px'}} className="bill-total flex-col">
 					<span>Bill Amount</span>
-					<input type="text" defaultValue={this.props.billAmount} onKeyPress={(e) => this.handleKeyPress(e)}  disabled />
+					<input type="text" defaultValue={this.props.billTotal} onKeyPress={(e) => this.handleKeyPress(e)}  disabled />
 				</div>
 
 				<div style={{ paddingLeft: '0'}}  className="guest-count flex-row">
                 	<div>Split Bill</div>
-					<div onClick={() => this.props.getSplitAmount('minus')}>
+					<div onClick={() => this.props.getPartyCount('minus')}>
 						<p className="icon ion-md-remove">-</p>
 					</div>
 					<div>
-						<span>{this.props.splitCount} </span>
+						<span>{this.props.partyCount} </span>
 						<p className="icon ion-md-person"></p>
 					</div>
-					<div onClick={() => this.props.getSplitAmount('add')}>
+					<div onClick={() => this.props.getPartyCount('add')}>
 						<p className="icon ion-md-add">+</p>
 					</div>
 				</div>
