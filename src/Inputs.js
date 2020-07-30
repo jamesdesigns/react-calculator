@@ -23,7 +23,7 @@ class Inputs extends Component {
 		}
 	}
 
-	// This 
+	// This sets the Tip Percentage selected and saves it in the setState
 	handleTipSelect(i) {
 		this.setState({ active: i });
         this.props.getTipPercentage(i)
@@ -59,7 +59,7 @@ class Inputs extends Component {
 
 				<div style={{ paddingLeft: '48px'}}  className="tip-percent flex-col">
 					<ul>
-						{	// This returns the array of all the Tip Percentage Strings to display the % Amount
+						{	// This returns the array of all the Tip Percentage options and displays all 4 selections
 							tipPercentages.map((el, i) => (
 								<li className={this.handleStyleChange(i)} key={el} onClick={() => this.handleTipSelect(i)}>
 									{el}
