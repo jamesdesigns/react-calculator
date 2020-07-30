@@ -45,14 +45,14 @@ class Inputs extends Component {
 
 				<div style={{ paddingLeft: '0'}}  className="guest-count flex-row">
                 	<div>Split Bill</div>
-					<div onClick={() => this.props.getPartyCount('minus')}>
+					<div onClick={() => this.props.getSplitCount('minus')}>
 						<p className="icon ion-md-remove">-</p>
 					</div>
 					<div>
-						<span>{this.props.partyCount} </span>
+						<span>{this.props.splitCount} </span>
 						<p className="icon ion-md-person"></p>
 					</div>
-					<div onClick={() => this.props.getPartyCount('add')}>
+					<div onClick={() => this.props.getSplitCount('add')}>
 						<p className="icon ion-md-add">+</p>
 					</div>
 				</div>

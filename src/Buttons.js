@@ -1,5 +1,6 @@
 import React from 'react';
 
+// This outputs the Calculator Buttons - the Numbers
 const Buttons = (props) => {
 	return (
 		<ul className="flex-row keypad">
