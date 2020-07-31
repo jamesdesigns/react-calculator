@@ -19,7 +19,8 @@ body {
 }
 
 #root {
-  width: 425px;
+  /* width: 425px; */
+  width: 100%;
   height: 850px;
   color: white;
   margin: 0 auto;
@@ -53,7 +54,8 @@ ul {
 }
 
 .results {
-	width: 370px;
+  /* width: 370px; */
+  width: 100%;
   color: white;
 	justify-content: space-evenly;
 }

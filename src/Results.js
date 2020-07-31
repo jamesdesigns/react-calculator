@@ -13,7 +13,7 @@ const Results = (props) => {
 	
 	// This will output the Total Bill, including the Split Bill by an amount of each person splitting the bill 
 	return (
-		<ul style={{ backgroundColor: '#181818', padding: '30px 30px 15px 26px', borderTopLeftRadius: '15px', borderTopRightRadius: '15px', marginTop: '10px'}} className="results flex-row">
+		<ul style={{ backgroundColor: '#181818', paddingTop: '50px'}} className="results flex-row">
 			<li className="cost-pp flex-col">
                 <img style={{ width: '80px', height: '80px', marginLeft: '78%', marginBottom: '-75px'}} src={qrcode} alt="QR Code" />
 				<span>Total Bill</span>
