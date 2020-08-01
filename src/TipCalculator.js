@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Results from './Results';
 import Inputs from './Inputs';
 import Buttons from './Buttons';
+import QRCode from 'qrcode'
 
 // Declare Button Values for the TipCalculator and Tip Percentage Values
 const btnValues = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
@@ -19,7 +20,8 @@ class TipCalculator extends Component {
 			numberOfPeople: 1,
 			percentages: tipPercentages,
 			tipTotal: 0,
-			costPP: 0
+			costPP: 0,
+			qrcode: ''
 		};
 
 		// Binding is necessary to make `this` work in the callback
@@ -27,6 +29,16 @@ class TipCalculator extends Component {
 		this.updateTotalBill = this.updateTotalBill.bind(this);
 		this.updateSplitCount = this.updateSplitCount.bind(this);
 		this.getTipPercentage = this.getTipPercentage.bind(this);
+	}
+
+	generateQR() {
+		let str = 'My first QR!'
+
+		QRCode.toCanvas(document.getElementById('canvas'), str,
+		function(error) {
+			if (error) console.error(error)
+			// console.log('success!')
+		})
 	}
 
 	onClickBtn(i) {	
@@ -135,6 +147,7 @@ class TipCalculator extends Component {
 	render() {
 		return (
 			<div>
+				<canvas style={{ float: 'right', marginBottom: '-128px', marginRight: '8%'}} id="canvas" />
 				<Results 
 					costPerPerson={this.state.costPP} 
 					billTotal={this.state.billTotal}
@@ -148,6 +161,9 @@ class TipCalculator extends Component {
 					getTipPercentage={this.getTipPercentage}
 					handleInputChange={this.handleInputChange} />
 				<Buttons onClickBtn={this.onClickBtn} buttons={this.state.buttons} />
+				<button style={{ padding: '15px', marginTop: '-90px', backgroundColor: 'orange', marginBototm: '20px', fontSize:'18px', width: '100%' }} onClick={this.generateQR}>
+					Pay Bill
+				</button>
 			</div>
 		)
 	}
