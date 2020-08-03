@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Results from './Results';
 import Inputs from './Inputs';
 import Buttons from './Buttons';
-import QRCode from 'qrcode'
+import QRCode from 'qrcode';
+
 
 // Declare Button Values for the TipCalculator and Tip Percentage Values
 const btnValues = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
@@ -34,7 +35,7 @@ class TipCalculator extends Component {
 	generateQR() {
 		let str = 'My first QR!'
 
-		QRCode.toCanvas(document.getElementById('canvas'), str,
+		QRCode.toCanvas(document.getElementById('canvas'), str, 
 		function(error) {
 			if (error) console.error(error)
 			// console.log('success!')
@@ -147,7 +148,9 @@ class TipCalculator extends Component {
 	render() {
 		return (
 			<div>
-				<canvas style={{ float: 'right', marginBottom: '-149px', marginRight: '8%'}} id="canvas" />
+				<canvas 
+				style={{ float: 'right', marginBottom: '-149px', marginRight: '8%'}} 
+				id="canvas" />
 				<Results 
 					costPerPerson={this.state.costPP} 
 					billTotal={this.state.billTotal}
