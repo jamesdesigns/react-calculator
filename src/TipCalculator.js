@@ -147,7 +147,7 @@ class TipCalculator extends Component {
 	render() {
 		return (
 			<div>
-				<canvas style={{ float: 'right', marginBottom: '-128px', marginRight: '8%'}} id="canvas" />
+				<canvas style={{ float: 'right', marginBottom: '-149px', marginRight: '8%'}} id="canvas" />
 				<Results 
 					costPerPerson={this.state.costPP} 
 					billTotal={this.state.billTotal}
@@ -161,7 +161,7 @@ class TipCalculator extends Component {
 					getTipPercentage={this.getTipPercentage}
 					handleInputChange={this.handleInputChange} />
 				<Buttons onClickBtn={this.onClickBtn} buttons={this.state.buttons} />
-				<button style={{ padding: '15px', marginTop: '-90px', backgroundColor: 'orange', marginBototm: '20px', fontSize:'18px', width: '100%' }} onClick={this.generateQR}>
+				<button style={{ cursor: 'pointer', padding: '15px', marginTop: '-90px', backgroundColor: 'orange', marginBototm: '20px', fontSize:'18px', width: '100%' }} onClick={this.generateQR}>
 					Pay Bill
 				</button>
 			</div>
