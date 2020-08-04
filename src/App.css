@@ -50,7 +50,7 @@ body {
 ul {
 	list-style: none;
   margin-top: -18px;
-  padding: 0 10px 25px;
+  padding: 0 10px 35px;
 }
 
 .results {
@@ -213,4 +213,15 @@ ul {
 .icon {
   font-weight: bold;
   font-size: 3rem;
+}
+
+
+@media screen and (min-width: 800px) {
+  #root {
+    width: 450px;
+  }
+
+  .results {
+    width: 96%;
+  }
 }

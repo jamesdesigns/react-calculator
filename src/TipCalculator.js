@@ -164,7 +164,7 @@ class TipCalculator extends Component {
 					getTipPercentage={this.getTipPercentage}
 					handleInputChange={this.handleInputChange} />
 				<Buttons onClickBtn={this.onClickBtn} buttons={this.state.buttons} />
-				<button style={{ cursor: 'pointer', padding: '15px', marginTop: '-90px', backgroundColor: 'orange', marginBototm: '20px', fontSize:'18px', width: '100%' }} onClick={this.generateQR}>
+				<button style={{ bottom: '0', left: '0',  cursor: 'pointer', padding: '15px', marginTop: '-90px', backgroundColor: 'orange', marginBototm: '20px', fontSize:'22px', width: '100%' }} onClick={this.generateQR}>
 					Pay Bill
 				</button>
 			</div>
