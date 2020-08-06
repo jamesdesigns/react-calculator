@@ -9,6 +9,7 @@ import QRCode from 'qrcode';
 const btnValues = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
 const tipPercentages = [.10, .15, .18, .20];
 
+
 // Create a class component named TipCalculator and use this in the App.js component
 class TipCalculator extends Component {
 	constructor(props) {
@@ -21,8 +22,7 @@ class TipCalculator extends Component {
 			numberOfPeople: 1,
 			percentages: tipPercentages,
 			tipTotal: 0,
-			costPP: 0,
-			qrcode: ''
+			costPP: 0
 		};
 
 		// Binding is necessary to make `this` work in the callback
@@ -30,15 +30,21 @@ class TipCalculator extends Component {
 		this.updateTotalBill = this.updateTotalBill.bind(this);
 		this.updateSplitCount = this.updateSplitCount.bind(this);
 		this.getTipPercentage = this.getTipPercentage.bind(this);
+		this.generateQR = this.generateQR.bind(this);
 	}
 
 	generateQR() {
-		let str = 'My first QR!'
+		let str = this.state.billTotal;
+		let str2 = this.state.tipTotal;
 
-		QRCode.toCanvas(document.getElementById('canvas'), str, 
-		function(error) {
-			if (error) console.error(error)
+
+		const bill = `Your are about to pay $${str} + $${str2}. Pay Bill?`;
+
+		QRCode.toCanvas(document.getElementById('canvas'), bill, 
+		function(a) {
+			// if (error) console.error(error)
 			// console.log('success!')
+			return a
 		})
 	}
 
@@ -74,7 +80,8 @@ class TipCalculator extends Component {
 				billTotal: newState,
 				numberOfPeople: 1,
                 tipTotal: 0,
-                costPP: 0,
+				costPP: 0,
+				qrcode: '',
 			}, function() {
 				this.calculateTotalAmount();
 			});
@@ -149,7 +156,7 @@ class TipCalculator extends Component {
 		return (
 			<div>
 				<canvas 
-				style={{ float: 'right', marginBottom: '-149px', marginRight: '8%'}} 
+				style={{ bgColor: '#000000', float: 'right', marginBottom: '-149px', marginRight: '8%'}} 
 				id="canvas" />
 				<Results 
 					costPerPerson={this.state.costPP} 
