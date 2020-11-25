@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Results from './Results';
 import Inputs from './Inputs';
 import Buttons from './Buttons';
-import QRCode, { create, toCanvas } from 'qrcode';
-
+// import QRCode, { create, toCanvas } from 'qrcode';
+import QRCode from 'qrcode';
 
 // Declare Button Values for the TipCalculator and Tip Percentage Values
 const btnValues = [7,8,9,4,5,6,1,2,3,'.',0,'C'];
