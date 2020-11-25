@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Results from './Results';
 import Inputs from './Inputs';
 import Buttons from './Buttons';
-import QRCode from 'qrcode';
+import QRCode, { create, toCanvas } from 'qrcode';
 
 
 // Declare Button Values for the TipCalculator and Tip Percentage Values
@@ -22,7 +22,8 @@ class TipCalculator extends Component {
 			numberOfPeople: 1,
 			percentages: tipPercentages,
 			tipTotal: 0,
-			costPP: 0
+			costPP: 0,
+			generateQR: QRCode,
 		};
 
 		// Binding is necessary to make `this` work in the callback
@@ -81,7 +82,7 @@ class TipCalculator extends Component {
 				numberOfPeople: 1,
                 tipTotal: 0,
 				costPP: 0,
-				qrcode: '',
+				generateQR: false
 			}, function() {
 				this.calculateTotalAmount();
 			});
